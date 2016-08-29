@@ -8,7 +8,7 @@
     "start": "node dist/index.js",
     "dev": "nodemon --ext js,jsx --delay 250ms --ignore ./dist --ignore ./public --exec \"webpack && babel-node src/index.js\""
   },
-  "author": "",
+  "author": "[M7] Михаил Семёнов (Mihail Semjonov)",
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.5.1",
