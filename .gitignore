@@ -1,0 +1,6 @@
+.idea
+node_modules
+private.config.js
+dist
+public/js/main.js
+public/js/main.js.map
