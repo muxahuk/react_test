@@ -4,30 +4,30 @@ import Express, { static as EStatic } from 'express';
 import path from 'path';
 import views from './views';
 
-const App = new Express();
+const app = new Express();
 
-App.set( 'env', process.env.NODE_ENV || 'development' );
-App.set( 'port', process.env.PORT || 3131 );
-App.set( 'host', process.env.HOST || 'localhost' );
-App.set( 'root', __dirname );
-App.disable( 'x-powered-by' );
+app.set( 'env', process.env.NODE_ENV || 'development' );
+app.set( 'port', process.env.PORT || 3131 );
+app.set( 'host', process.env.HOST || 'localhost' );
+app.set( 'root', __dirname );
+app.disable( 'x-powered-by' );
 
-views( App, {
+views( app, {
 	test       : /.*/,
 	components : {
 		App : {
-			file    : path.join( App.get( 'root' ), 'public', 'js', 'App' ),
+			file    : path.join( app.get( 'root' ), 'public', 'js', 'App' ),
 			options : {}
 		}
 	}
 } );
-App.set( 'view engine', 'ejs' );
-App.use( EStatic( path.join( App.get( 'root' ), '..', 'public' ) ) );
+app.set( 'view engine', 'ejs' );
+app.use( EStatic( path.join( app.get( 'root' ), '..', 'public' ) ) );
 
-App.get( '/', ( req, res ) => {
+app.get( '/', ( req, res ) => {
 	res.render( 'index' );
 } );
 
-App.listen( App.get( 'port' ), App.get( 'host' ), () => {
-	console.log( '\r\n\r\n\tServer working on: http://' + App.get( 'host' ) + ':' + App.get( 'port' ) + '\r\n\r\n' );
+app.listen( app.get( 'port' ), app.get( 'host' ), () => {
+	console.log( '\r\n\r\n\tServer working on: http://' + app.get( 'host' ) + ':' + app.get( 'port' ) + '\r\n\r\n' );
 } );
