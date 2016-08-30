@@ -31,3 +31,5 @@ app.get( '/', ( req, res ) => {
 app.listen( app.get( 'port' ), app.get( 'host' ), () => {
 	console.log( '\r\n\r\n\tServer working on: http://' + app.get( 'host' ) + ':' + app.get( 'port' ) + '\r\n\r\n' );
 } );
+
+require( './configs' );

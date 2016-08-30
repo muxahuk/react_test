@@ -6,7 +6,7 @@
   "scripts": {
     "prestart": "cross-env NODE_ENV=production webpack && babel src --out-dir dist",
     "start": "cross-env NODE_ENV=production node dist/index.js",
-    "dev": "cross-env NODE_ENV=development nodemon --ext js,jsx --delay 250ms --ignore ./dist --ignore ./public --exec \"webpack && babel-node src/index.js\""
+    "dev": "cross-env NODE_ENV=development nodemon --ext js,jsx --ignore ./dist --ignore ./public --exec \"webpack && babel-node src/index.js\""
   },
   "author": "[M7] Михаил Семёнов (Mihail Semjonov)",
   "license": "ISC",

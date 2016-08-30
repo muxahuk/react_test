@@ -1,0 +1,43 @@
+{
+	"logo"        : "/images/logo.png",
+	"title"       : "My Awesome Website",
+	"description" : "My Website Description",
+	"grid"        : 12,
+	"width"       : "100vw",
+	"height"      : "auto",
+	"styles"      : {
+		"background" : "#fff"
+	},
+	"page"        : {
+		"direction"     : "column",
+		"wrap"          : "no-wrap",
+		"justify"       : "flex-start",
+		"align-items"   : "stretch",
+		"align-content" : "stretch",
+		"styles"        : {
+			"padding" : "0"
+		}
+	},
+	"row"         : {
+		"grid"          : 12,
+		"full-width"    : false,
+		"direction"     : "row",
+		"wrap"          : "no-wrap",
+		"justify"       : "center",
+		"align-items"   : "stretch",
+		"align-content" : "stretch",
+		"styles"        : {
+			"padding" : "0 20px"
+		}
+	},
+	"column"      : {
+		"order"  : 0,
+		"grow"   : 0,
+		"shrink" : 1,
+		"basis"  : "auto",
+		"align"  : "auto",
+		"styles" : {
+			"padding" : "0 20px"
+		}
+	}
+}
